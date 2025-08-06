@@ -10,7 +10,6 @@
         * Focus: Cleanliness, Readability, Intentionality
         * Palette: Whites, Grays, and a sophisticated accent (#4A7D9C)
         */
-
         body {
             font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
@@ -22,7 +21,6 @@
             flex-direction: column;
             min-height: 100vh; /* Ensures the footer stays at the bottom of the viewport */
         }
-
         .container {
             max-width: 960px;
             margin: 80px auto; /* Generous vertical whitespace above and below the main content */
@@ -32,7 +30,6 @@
             box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04); /* Very light, intentional shadow for slight depth */
             flex-grow: 1; /* Allows the container to push the footer down if content is short */
         }
-
         h1 {
             font-size: 2.8em; /* Prominent but not overwhelming */
             font-weight: 300; /* Light font-weight for a refined, modern look */
@@ -41,7 +38,6 @@
             margin-bottom: 0.7em; /* Balanced spacing below the main title */
             letter-spacing: 0.03em; /* Subtle letter-spacing for elegance */
         }
-
         h2 {
             font-size: 1.8em; /* Clear hierarchy below h1 */
             font-weight: 400; /* Regular weight for subheadings */
@@ -51,7 +47,6 @@
             margin-bottom: 0.8em;
             letter-spacing: 0.02em;
         }
-
         p {
             font-size: 1.05em;
             text-align: center;
@@ -61,7 +56,6 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .project-card {
             background-color: #FFFFFF; /* White background for project cards */
             border: 1px solid #EAEAEA; /* A very subtle, light gray border for definition */
@@ -74,13 +68,11 @@
             text-align: center;
             transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out; /* Smooth transitions for interactivity */
         }
-
         .project-card:hover {
             transform: translateY(-5px); /* Gentle lift effect on hover */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* More pronounced shadow on hover for clear feedback */
             border-color: #CCCCCC; /* Slightly darker border on hover */
         }
-
         .project-card img {
             max-width: 100%;
             height: auto;
@@ -88,7 +80,6 @@
             margin-bottom: 30px; /* Clear separation below the image */
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02); /* Almost imperceptible shadow on image */
         }
-
         .project-card a {
             display: inline-block;
             padding: 14px 35px; /* Larger padding for easier interaction */
@@ -102,13 +93,11 @@
             text-transform: uppercase; /* Uppercase text for a modern, sleek look */
             transition: background-color 0.3s ease, color 0.3s ease, transform 0.15s ease; /* Smooth hover transitions */
         }
-
         .project-card a:hover {
             background-color: #4A7D9C; /* Button fills with accent color on hover */
             color: #FFFFFF; /* Text turns white on hover for contrast */
             transform: translateY(-2px); /* Slight lift on hover */
         }
-
         footer {
             text-align: center;
             margin-top: 80px; /* More space above the footer to emphasize whitespace */
@@ -117,7 +106,6 @@
             color: #999999; /* Muted gray for the footer text */
             border-top: 1px solid #EAEAEA; /* A very thin, light gray line separates footer from content */
         }
-
         /* Basic responsiveness for smaller screens */
         @media (max-width: 768px) {
             .container {
@@ -142,7 +130,6 @@
                 font-size: 0.9em;
             }
         }
-
         @media (max-width: 480px) {
             .container {
                 margin: 20px 15px;
@@ -168,6 +155,13 @@
     <div class="container">
         <h1>Welcome to My VR Experiences!</h1>
         <p>Explore a collection of interactive Virtual Reality projects designed for the web and optimized for the Oculus Quest 2 browser. Just click on a link below and step into the immersive world!</p>
+        
+        <div class="project-card">
+            <h2>AR Tetris</h2>
+            <img src="tetris.png" alt="Screenshot of the AR Tetris game">
+            <p>Play the classic puzzle game Tetris directly in your environment using Augmented Reality! Manipulate glass, metal, and crystal blocks and watch them explode when you clear lines. Requires an AR-compatible device like the Meta Quest 2.</p>
+            <a href="https://augmentedthinker.github.io/AR-Tetris/">Launch AR Experience</a>
+        </div>
 
         <div class="project-card">
             <h2>Forest Shooter Challenge</h2>
@@ -175,9 +169,8 @@
             <p>Dive into an immersive forest environment where your reflexes are put to the test. Shoot incoming projectiles that get faster over time. Survive for one minute to win, or get hit three times and it's game over!</p>
             <a href="https://augmentedthinker.github.io/shootingballs/">Launch VR Experience</a>
         </div>
-
-        </div>
-
+        
+    </div>
     <footer>
         <p>&copy; 2025 My VR Projects. All rights reserved.</p>
     </footer>
