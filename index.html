@@ -14,197 +14,287 @@
             font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F8F8F8; /* Light off-white background for extensive whitespace */
-            color: #333333; /* Primary dark gray for text, ensuring readability */
+            background-color: #F8F8F8;
+            color: #333333;
             line-height: 1.6;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensures the footer stays at the bottom of the viewport */
+            min-height: 100vh;
         }
         .container {
             max-width: 960px;
-            margin: 80px auto; /* Generous vertical whitespace above and below the main content */
-            padding: 50px; /* Ample internal padding for content to breathe */
-            background-color: #FFFFFF; /* Pure white background for the content block */
-            border-radius: 10px; /* Subtle rounded corners */
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04); /* Very light, intentional shadow for slight depth */
-            flex-grow: 1; /* Allows the container to push the footer down if content is short */
+            margin: 80px auto;
+            padding: 50px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+            flex-grow: 1;
         }
         h1 {
-            font-size: 2.8em; /* Prominent but not overwhelming */
-            font-weight: 300; /* Light font-weight for a refined, modern look */
-            text-align: center;
-            color: #1A1A1A; /* Very dark gray for strong contrast and sophistication */
-            margin-bottom: 0.7em; /* Balanced spacing below the main title */
-            letter-spacing: 0.03em; /* Subtle letter-spacing for elegance */
-        }
-        h2 {
-            font-size: 1.8em; /* Clear hierarchy below h1 */
-            font-weight: 400; /* Regular weight for subheadings */
+            font-size: 2.8em;
+            font-weight: 300;
             text-align: center;
             color: #1A1A1A;
-            margin-top: 2.5em; /* Ample space above project titles */
+            margin-bottom: 0.7em;
+            letter-spacing: 0.03em;
+        }
+        h2 {
+            font-size: 1.8em;
+            font-weight: 400;
+            text-align: center;
+            color: #1A1A1A;
+            margin-top: 2.5em;
             margin-bottom: 0.8em;
             letter-spacing: 0.02em;
         }
         p {
             font-size: 1.05em;
             text-align: center;
-            color: #666666; /* Softer gray for body text to reduce visual harshness */
-            margin-bottom: 3.5em; /* More vertical space below introductory paragraph */
-            max-width: 700px; /* Constrains paragraph width for better readability */
+            color: #666666;
+            margin-bottom: 3.5em;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
         .project-card {
-            background-color: #FFFFFF; /* White background for project cards */
-            border: 1px solid #EAEAEA; /* A very subtle, light gray border for definition */
-            border-radius: 8px; /* Consistent rounded corners */
-            padding: 40px; /* Generous internal padding for card content */
-            margin-bottom: 50px; /* Significant vertical spacing between project cards */
+            background-color: #FFFFFF;
+            border: 1px solid #EAEAEA;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out; /* Smooth transitions for interactivity */
+            transition: transform 0.25s ease-out, box-shadow 0.25s ease-out, border-color 0.25s ease-out;
         }
         .project-card:hover {
-            transform: translateY(-5px); /* Gentle lift effect on hover */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* More pronounced shadow on hover for clear feedback */
-            border-color: #CCCCCC; /* Slightly darker border on hover */
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-color: #CCCCCC;
         }
         .project-card img {
             max-width: 100%;
             height: auto;
-            border-radius: 6px; /* Subtle rounding for images */
-            margin-bottom: 30px; /* Clear separation below the image */
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02); /* Almost imperceptible shadow on image */
+            border-radius: 6px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
         }
-        .project-card a {
+
+        /* Button Layout */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-card a, .qr-btn {
             display: inline-block;
-            padding: 14px 35px; /* Larger padding for easier interaction */
+            padding: 14px 30px;
             text-decoration: none;
-            border: 2px solid #4A7D9C; /* A sophisticated charcoal blue accent color for the button outline */
-            color: #4A7D9C; /* Text color matches the accent border */
-            background-color: transparent; /* Transparent background for a clean, outline style */
-            border-radius: 30px; /* Pill-shaped button */
-            font-weight: 600; /* Bolder text for emphasis */
-            letter-spacing: 0.06em; /* Enhanced letter spacing for button text */
-            text-transform: uppercase; /* Uppercase text for a modern, sleek look */
-            transition: background-color 0.3s ease, color 0.3s ease, transform 0.15s ease; /* Smooth hover transitions */
+            border: 2px solid #4A7D9C;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: inherit;
         }
+
+        .project-card a {
+            color: #FFFFFF;
+            background-color: #4A7D9C;
+        }
+
         .project-card a:hover {
-            background-color: #4A7D9C; /* Button fills with accent color on hover */
-            color: #FFFFFF; /* Text turns white on hover for contrast */
-            transform: translateY(-2px); /* Slight lift on hover */
+            background-color: #3a637d;
+            border-color: #3a637d;
+            transform: translateY(-2px);
         }
+
+        .qr-btn {
+            color: #4A7D9C;
+            background-color: transparent;
+        }
+
+        .qr-btn:hover {
+            background-color: rgba(74, 125, 156, 0.05);
+            transform: translateY(-2px);
+        }
+
+        /* Modal Styles */
+        #qr-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 320px;
+            position: relative;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+        }
+
+        .modal-content h3 {
+            margin-top: 0;
+            color: #1A1A1A;
+            font-weight: 400;
+        }
+
+        #qr-image {
+            width: 200px;
+            height: 200px;
+            margin: 20px 0;
+        }
+
+        .close-modal {
+            margin-top: 20px;
+            color: #666;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 0.9em;
+        }
+
         footer {
             text-align: center;
-            margin-top: 80px; /* More space above the footer to emphasize whitespace */
+            margin-top: 80px;
             padding: 30px 20px;
-            font-size: 0.85em; /* Slightly smaller font for secondary information */
-            color: #999999; /* Muted gray for the footer text */
-            border-top: 1px solid #EAEAEA; /* A very thin, light gray line separates footer from content */
+            font-size: 0.85em;
+            color: #999999;
+            border-top: 1px solid #EAEAEA;
         }
-        /* Basic responsiveness for smaller screens */
+
         @media (max-width: 768px) {
-            .container {
-                margin: 40px 20px; /* Adjust side margins for smaller screens */
-                padding: 30px;
-            }
-            h1 {
-                font-size: 2.2em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            p {
-                margin-bottom: 2.5em;
-            }
-            .project-card {
-                padding: 30px;
-                margin-bottom: 40px;
-            }
-            .project-card a {
-                padding: 12px 25px;
-                font-size: 0.9em;
-            }
-        }
-        @media (max-width: 480px) {
-            .container {
-                margin: 20px 15px;
-                padding: 20px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            h2 {
-                font-size: 1.3em;
-            }
-            p {
-                font-size: 0.95em;
-            }
-            .project-card {
-                padding: 20px;
-                margin-bottom: 30px;
-            }
+            .container { margin: 40px 20px; padding: 30px; }
+            h1 { font-size: 2.2em; }
+            .button-group { flex-direction: column; width: 100%; }
+            .project-card a, .qr-btn { width: 100%; box-sizing: border-box; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to My VR Experiences!</h1>
-        <p>Explore a collection of interactive Virtual Reality projects designed for the web and optimized for the Oculus Quest 2 browser. Just click on a link below and step into the immersive world!</p>
+        <p>Explore interactive VR projects optimized for the Oculus Quest 2. Click a link to play, or open the QR code to scan directly with your headset or phone.</p>
 
         <!-- Fight Tavern Card -->
         <div class="project-card">
             <h2>Fight Tavern</h2>
-            <!-- Image set to TITLE.png as requested -->
             <img src="TITLE.png" alt="Screenshot of the Fight Tavern game">
             <p>Step into the tavern and test your combat skills in this immersive fighting experience.</p>
-            <a href="https://augmentedthinker.github.io/FIGHT-TAVERN/">Enter the Tavern</a>
+            <div class="button-group">
+                <a href="https://augmentedthinker.github.io/FIGHT-TAVERN/">Enter the Tavern</a>
+                <button class="qr-btn" onclick="openQR('https://augmentedthinker.github.io/FIGHT-TAVERN/', 'Fight Tavern')">Scan QR</button>
+            </div>
         </div>
 
         <!-- Frequency Card -->
         <div class="project-card">
             <h2>Frequency</h2>
-            <!-- Image set to FREQUENCY.png as requested -->
             <img src="FREQUENCY.png" alt="Screenshot of the Frequency game">
             <p>A rhythmic VR experience where sound and visual frequency collide.</p>
-            <a href="https://augmentedthinker.github.io/frequency/">Experience Frequency</a>
+            <div class="button-group">
+                <a href="https://augmentedthinker.github.io/frequency/">Experience Frequency</a>
+                <button class="qr-btn" onclick="openQR('https://augmentedthinker.github.io/frequency/', 'Frequency')">Scan QR</button>
+            </div>
         </div>
 
+        <!-- AR Tetris -->
         <div class="project-card">
             <h2>AR Tetris</h2>
             <img src="tetris.png" alt="Screenshot of the AR Tetris game">
-            <p>Play the classic puzzle game Tetris directly in your environment using Augmented Reality! Manipulate glass, metal, and crystal blocks and watch them explode when you clear lines. Requires an AR-compatible device like the Meta Quest 2.</p>
-            <a href="https://augmentedthinker.github.io/AR-PHONE-TETRIS/">Launch AR Experience</a>
+            <p>Play the classic puzzle game Tetris directly in your environment using Augmented Reality!</p>
+            <div class="button-group">
+                <a href="https://augmentedthinker.github.io/AR-PHONE-TETRIS/">Launch AR Experience</a>
+                <button class="qr-btn" onclick="openQR('https://augmentedthinker.github.io/AR-PHONE-TETRIS/', 'AR Tetris')">Scan QR</button>
+            </div>
         </div>
 
+        <!-- Forest Shooter -->
         <div class="project-card">
             <h2>Forest Shooter Challenge</h2>
             <img src="https://raw.githubusercontent.com/augmentedthinker/VRportfolio/main/game.png" alt="Screenshot of the Forest Shooter VR game">
-            <p>Dive into an immersive forest environment where your reflexes are put to the test. Shoot incoming projectiles that get faster over time. Survive for one minute to win, or get hit three times and it's game over!</p>
-            <a href="https://augmentedthinker.github.io/shootingballs/">Launch VR Experience</a>
+            <p>Dive into an immersive forest environment where your reflexes are put to the test.</p>
+            <div class="button-group">
+                <a href="https://augmentedthinker.github.io/shootingballs/">Launch VR Experience</a>
+                <button class="qr-btn" onclick="openQR('https://augmentedthinker.github.io/shootingballs/', 'Forest Shooter')">Scan QR</button>
+            </div>
         </div>
 
-        <!-- Super Mini Bros card -->
+        <!-- Super Mini Bros -->
         <div class="project-card">
             <h2>Super Mini Bros</h2>
             <img src="smario.png" alt="Screenshot of the Super Mini Bros platformer">
-            <p>Run, jump, power up, and race to the flagpole in this fast, browser-based platformer. Built with HTML5 Canvas and vanilla JavaScript.</p>
-            <a href="https://augmentedthinker.github.io/smario/">Play the Game</a>
+            <p>Run, jump, power up, and race to the flagpole in this fast, browser-based platformer.</p>
+            <div class="button-group">
+                <a href="https://augmentedthinker.github.io/smario/">Play the Game</a>
+                <button class="qr-btn" onclick="openQR('https://augmentedthinker.github.io/smario/', 'Super Mini Bros')">Scan QR</button>
+            </div>
         </div>
         
+        <!-- Chatbot -->
         <div class="project-card">
             <h2>Chatbot (Hugging Face Models)</h2>
             <img src="chat.png" alt="Screenshot of the Chatbot powered by Hugging Face models">
-            <p>A streamlined chatbot that pulls responses from Hugging Face models using your access token. Perfect for quick prototyping and experimenting with different LLMs.</p>
-            <a href="https://chatbot-hdf6q8eljw2oq8bxyzwbyv.streamlit.app/">Open Chatbot</a>
+            <p>A streamlined chatbot that pulls responses from Hugging Face models using your access token.</p>
+            <div class="button-group">
+                <a href="https://chatbot-hdf6q8eljw2oq8bxyzwbyv.streamlit.app/">Open Chatbot</a>
+                <button class="qr-btn" onclick="openQR('https://chatbot-hdf6q8eljw2oq8bxyzwbyv.streamlit.app/', 'AI Chatbot')">Scan QR</button>
+            </div>
         </div>
     </div>
+
+    <!-- QR Modal Container -->
+    <div id="qr-modal" onclick="closeQR()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h3 id="modal-title">Project QR Code</h3>
+            <p style="font-size: 0.9em; margin-bottom: 10px;">Scan to open on your device</p>
+            <img id="qr-image" src="" alt="QR Code">
+            <div class="close-modal" onclick="closeQR()">Close</div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2025 My VR Projects. All rights reserved.</p>
     </footer>
+
+    <script>
+        function openQR(url, title) {
+            const modal = document.getElementById('qr-modal');
+            const qrImg = document.getElementById('qr-image');
+            const modalTitle = document.getElementById('modal-title');
+            
+            // Using QRServer API to generate the code
+            const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(url)}`;
+            
+            modalTitle.innerText = title;
+            qrImg.src = qrUrl;
+            modal.style.display = 'flex';
+        }
+
+        function closeQR() {
+            document.getElementById('qr-modal').style.display = 'none';
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeQR();
+        });
+    </script>
 </body>
 </html>
